@@ -1,0 +1,151 @@
+/*
+    - Mobile: 375px
+    - Desktop: 1440px
+*/
+:root {
+    /* Primary */
+    --B-Orange: hsl(31, 77%, 52%);
+    --D-Cyan: hsl(184, 100%, 22%);
+    --VD-Cyan: hsl(179, 100%, 13%);
+
+    /* (paragraphs) / (background, headings, buttons) */
+    --T-White: hsla(0, 0%, 100%, 0.75);
+    --VL-Gray: hsl(0, 0%, 95%);
+}
+
+html {
+    /*font-family: 'Big Shoulders Display', cursive;*/
+     font-family: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--VL-Gray);
+}
+
+h1 {
+    color: var(--VL-Gray);
+}
+
+p {
+    color: var(--T-White);
+}
+
+/* Contents
+=======================================*/
+.content-holder {
+    margin: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cards {
+    padding: 50px;
+    height: 335px;
+
+}
+
+.cards img {
+    padding-bottom: 25px;
+}
+
+.cards h1 {
+    padding-bottom: 25px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.cards p {
+    padding-bottom: 35px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.cards a {
+    padding: 14px 30px;
+    text-decoration: none;
+    background-color: var(--VL-Gray);
+    border-radius: 50px;
+}
+
+.car-title {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+@media screen and (min-width: 1440px) {
+    .desktop-f {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .content-holder {
+        margin: 0;
+        width: 930px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cards {
+        height: 410px;
+    }
+
+    .cards p {
+        margin-bottom: 70px;
+    }
+}
+
+/* Content Cards Colors
+=======================================*/
+.cards:first-child {
+    background-color: var(--B-Orange);
+}
+
+.cards:first-child a {
+    color: var(--B-Orange);
+}
+
+.cards:nth-child(2) {
+    background-color: var(--D-Cyan);
+}
+
+.cards:nth-child(2) a {
+    color: var(--D-Cyan);
+}
+
+.cards:nth-child(3) {
+    background-color: var(--VD-Cyan);
+}
+
+.cards:nth-child(3) a {
+    color: var(--VD-Cyan);
+}
+
+@media screen and (min-width: 1440px) {
+    .cards:first-child a:hover {
+        background-color: var(--B-Orange);
+        border: 2px solid white;
+        color: white;
+    }
+
+    .cards:nth-child(2) a:hover {
+        background-color: var(--D-Cyan);
+        border: 2px solid white;
+        color: white;
+    }
+
+    .cards:nth-child(3) a:hover {
+        background-color: var(--VD-Cyan);
+        border: 2px solid white;
+        color: white;
+    }
+}
+
